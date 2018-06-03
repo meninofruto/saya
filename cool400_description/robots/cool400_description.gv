@@ -1,0 +1,29 @@
+digraph G {
+node [shape=box];
+"arm_base_link" [label="arm_base_link"];
+"link1" [label="link1"];
+"link2" [label="link2"];
+"link3" [label="link3"];
+"link4" [label="link4"];
+"link5" [label="link5"];
+"link6" [label="link6"];
+"left_gripper_link" [label="left_gripper_link"];
+"right_gripper_link" [label="right_gripper_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"arm_base_link" -> "joint1" [label="xyz: 0 0 0.046498 \nrpy: 0 -0 0"]
+"joint1" -> "link1"
+"link1" -> "joint2" [label="xyz: 0 0 0.084603 \nrpy: 0 -0 0"]
+"joint2" -> "link2"
+"link2" -> "joint3" [label="xyz: -0.00945 0 0.091 \nrpy: 0 -0 0"]
+"joint3" -> "link3"
+"link3" -> "joint4" [label="xyz: 0 0 0.0605 \nrpy: 0 -0 0"]
+"joint4" -> "link4"
+"link4" -> "joint5" [label="xyz: 0.00025 0 0.078 \nrpy: 0 0 -1.5708"]
+"joint5" -> "link5"
+"link5" -> "joint6" [label="xyz: 0.00025 0 0.031 \nrpy: 0 -0 -3.14159"]
+"joint6" -> "link6"
+"link6" -> "left_gripper_joint" [label="xyz: -0.070428 0.046018 -0.54501 \nrpy: -1.5708 -0 -1.5708"]
+"left_gripper_joint" -> "left_gripper_link"
+"link6" -> "right_gripper_joint" [label="xyz: -0.070428 0.046018 -0.54501 \nrpy: -1.5708 -0 -1.5708"]
+"right_gripper_joint" -> "right_gripper_link"
+}
